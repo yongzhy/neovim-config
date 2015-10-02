@@ -2,13 +2,14 @@
 filetype off
 filetype plugin indent off
 if has("win64") || has("win32") || has("win16")
-	set rtp+=~/.vim/bundle/Vundle.vim/
-	let vpath='~/.vim/bundle/'
+	set rtp+=~/.nvim/bundle/Vundle.vim/
+	let vpath='~/.nvim/bundle/'
 	call vundle#begin(vpath)
-	set rtp+=~/.vim/
+	set rtp+=~/.nvim/
 else
-	set rtp+=$HOME/.vim/bundle/Vundle.vim/
-	call vundle#begin()
+	set rtp+=$HOME/.nvim/bundle/Vundle.vim/
+	let vpath='~/.nvim/bundle/'
+	call vundle#begin(vpath)
 endif
 
 " let Vundle manage Vundle

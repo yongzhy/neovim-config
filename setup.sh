@@ -23,14 +23,14 @@ fi
 
 # create symbolic links
 cd ~
-if [[ -L .vimrc || -f .vimrc ]]; then
-	rm .vimrc
+if [[ -L .nvimrc || -f .nvimrc ]]; then
+	rm .nvimrc
 fi 
-if [[ -L .vim || -d .vim ]]; then
-	rm .vim
+if [[ -L .nvim || -d .nvim ]]; then
+	rm .nvim
 fi
-ln -s $CONFIG_DIR/.vimrc .vimrc
-ln -s $CONFIG_DIR/vim .vim
+ln -s $CONFIG_DIR/.nvimrc .nvimrc
+ln -s $CONFIG_DIR/vim .nvim
 
 # run vim to do the plugin install
-vim +PluginInstall +qall
+nvim +PluginInstall +qall
